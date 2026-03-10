@@ -1,21 +1,24 @@
-<!-- patreon-redirect.html -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Patreon Redirect</title>
-    <script>
-      // Get the code from the Patreon URL query
-      const params = new URLSearchParams(window.location.search);
-      const code = params.get("code");
+<head>
+<meta charset="UTF-8">
+<title>Redirecting...</title>
 
-      if (code) {
-        // Redirect to your iOS app with the code
-        window.location = `FindlayBarbell://oauth-callback/patreon?code=${code}`;
-      } else {
+<script>
+window.onload = function() {
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+
+    if (code) {
+        window.location.href = "FindlayBarbell://oauth-callback/patreon?code=" + code;
+    } else {
         document.body.innerText = "No code received from Patreon";
-      }
-    </script>
-  </head>
-  <body></body>
+    }
+};
+</script>
+
+</head>
+<body>
+Redirecting back to the app...
+</body>
 </html>
