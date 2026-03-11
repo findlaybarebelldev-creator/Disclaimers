@@ -18,7 +18,7 @@ const state = params.get("state")
 
 if (code) {
 
-    let appURL = "FindlayBarbell://oauth-callback/patreon?code=" + code
+    let appURL = "FindlayBarbell://oauth-callback/?code=" + code
 
     if (state) {
         appURL += "&state=" + state
