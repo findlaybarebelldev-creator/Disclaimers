@@ -10,13 +10,23 @@
   <p>Copy the code below and paste it into the app:</p>
 
   <input type="text" id="patreonCode" style="width: 100%;" readonly>
+  <button id="copyButton">Copy to Clipboard</button>
 
   <script>
     const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
 
     if (code) {
-      document.getElementById("patreonCode").value = code;
+      const codeInput = document.getElementById("patreonCode");
+      codeInput.value = code;
+
+      const copyButton = document.getElementById("copyButton");
+      copyButton.addEventListener("click", () => {
+        navigator.clipboard.writeText(codeInput.value)
+          .then(() => alert("Patreon code copied! Paste it in the app."))
+          .catch(() => alert("Failed to copy code. Try manually."));
+      });
+
     } else {
       document.body.innerHTML = "No Patreon code received. Try logging in again.";
     }
