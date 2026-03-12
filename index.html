@@ -20,15 +20,14 @@
       const codeInput = document.getElementById("patreonCode");
       codeInput.value = code;
 
-      const copyButton = document.getElementById("copyButton");
-      copyButton.addEventListener("click", () => {
+      document.getElementById("copyButton").addEventListener("click", () => {
         navigator.clipboard.writeText(codeInput.value)
           .then(() => alert("Patreon code copied! Paste it in the app."))
           .catch(() => alert("Failed to copy code. Try manually."));
       });
 
     } else {
-      document.body.innerHTML = "No Patreon code received. Try logging in again.";
+      document.body.innerHTML = "No Patreon code received. Make sure your redirect URI in Patreon matches exactly.";
     }
   </script>
 </body>
