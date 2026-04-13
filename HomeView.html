@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+     <!--  
+     HomeView.html
+     BeckleyFitnessApp
+
+     Created by Destiny Morrison on 04/13/26.
+    -->
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Beckley Fitness App</title>
+    <link rel="stylesheet" href="../StyleSheets/Styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <img src="../Images/logo.png" alt="Logo" class="topbar-logo">
+        <div class="title">BeckleyFitnessBrand</div>
+        <marquee class="announcements">
+            !!! Welcome to Beckley Fitness Disclaimers and Safety Page !!!
+        </marquee>
+    </header>
+
+    <nav class="navbar">
+        <a href="HomeView.html" class="active">Home</a>
+        <a href="WorkoutsView.html">Workouts</a>
+        <a href="ProfileView.html">Profile</a>
+        <a href="SettingsView.html">Settings</a>
+    </nav>
+
+    <main class="content">
+        <div class="locations-strip">
+            <div class="locations">
+
+            <div class="location-wrapper">
+                <h3 class="location-header">Findlay Barbell</h3>
+                <div class="location-card">
+                    <img src="../Images/gym1.png" alt="Findlay Barbell">
+                    <a href="#" class="button" onclick="openModal('findlay')">More Info</a>
+                    <div class="location-address">123 Fitness St, Findlay, OH</div>
+                </div>
+            </div>
+
+            <div class="location-wrapper">
+                <h3 class="location-header">Ju-Juitsu</h3>
+                <div class="location-card">
+                    <img src="../Images/gym2.png" alt="Ju-Juitsu">
+                    <a href="#" class="button" onclick="openModal('jujitsu')">More Info</a>
+                    <div class="location-address">456 Martial Way, Findlay, OH</div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="chatbar">
+        <input type="text" placeholder="Enter your message..." />
+        <button>Send</button>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <script>
+        const modalData = {
+            findlay: `
+                <h3>Findlay Barbell</h3>
+                <p>Hello and welcome to Findlay Barbell, located in Findlay, OH!</p>
+                <p>We are a 24-hour private strength training facility with racks, benches, dumbbells (5-150 lbs), platforms, and specialty barbells. Our community includes bodybuilders, powerlifters, BJJ/MMA fighters, college athletes, and Special Olympics athletes.</p>
+                <p><strong>Mission:</strong> Empower others to become their best self.</p>
+                <p><strong>Core Values:</strong> RESPECT, INTEGRITY, COMMUNITY, QUALITY, LISTENING, GROWTH</p>
+                <p><strong>Vision:</strong> Create an ever-improving gym environment for all members to feel comfortable and empowered.</p>
+            `,
+            jujitsu: `
+                <h3>Ju-Juitsu</h3>
+                <p>Welcome to Ju-Juitsu, our martial arts location in Findlay, OH!</p>
+                <p>We offer top-notch Brazilian Jiu-Jitsu classes, open mats, and MMA training for all levels. Our instructors are experienced fighters and coaches, dedicated to helping students develop skills, discipline, and confidence.</p>
+                <p><strong>Location:</strong> 456 Martial Way, Findlay, OH</p>
+            `
+        };
+
+        function openModal(key) {
+            document.getElementById('modal-text').innerHTML = modalData[key];
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('modal')) {
+                closeModal();
+            }
+        }
+    </script>
+
+    <div class="contact-box">
+        <h2>Contact us for more info on joining!</h2>
+        <form>
+            <div class="form-group">
+                <label for="first-name">First Name <span class="required">*</span></label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name <span class="required">*</span></label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
