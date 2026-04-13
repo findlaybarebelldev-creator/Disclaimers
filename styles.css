@@ -1,0 +1,141 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --subtext: #6b7280;
+  --accent: #ff424d;
+  --accent-dark: #d93640;
+  --border: #dbe3ee;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 22px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0 0 18px;
+  color: var(--subtext);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#patreonCode {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f9fafb;
+  color: var(--text);
+  margin-bottom: 14px;
+  text-align: center;
+  word-break: break-all;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#copyButton {
+  background: var(--accent);
+  color: white;
+}
+
+#copyButton:hover {
+  background: var(--accent-dark);
+}
+
+.secondary-button {
+  background: #eef2f7;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.secondary-button:hover {
+  background: #e5ebf3;
+}
+
+.error-message {
+  font-size: 1rem;
+  color: #b91c1c;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px 12px;
+    align-items: flex-start;
+  }
+
+  .container {
+    padding: 22px 16px;
+    border-radius: 16px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p,
+  #patreonCode,
+  button {
+    font-size: 0.98rem;
+  }
+}
