@@ -290,3 +290,51 @@ body::after {
 .contact-box button:hover {
   background-color: #b94e36;
 }
+.policy-box {
+  max-width: 950px;
+  margin: 20px auto;
+  padding: 35px 45px;
+  background-color: rgba(10, 10, 10, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+.policy-box h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #e15e32;
+  text-align: center;
+}
+
+.policy-box h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  color: #e15e32;
+}
+
+.policy-box p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.policy-box ul {
+  margin: 10px 0 20px 25px;
+}
+
+.policy-box li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.effective-date {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ddd;
+}
