@@ -290,3 +290,55 @@ body::after {
 .contact-box button:hover {
   background-color: #b94e36;
 }
+
+.effective-date {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+.policy-box {
+  max-width: 950px;
+  margin: 20px auto;
+  padding: 35px 45px;
+  background-color: rgba(10, 10, 10, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  text-align: left;
+  color: #fff;
+}
+
+.policy-content,
+.policy-content * {
+  color: #f5f5f5 !important;
+  font-family: 'Roboto', system-ui, sans-serif !important;
+  background: transparent !important;
+}
+
+.policy-content h1,
+.policy-content h2,
+.policy-content h3,
+.policy-content [data-custom-class='title'],
+.policy-content [data-custom-class='heading_1'],
+.policy-content [data-custom-class='heading_2'] {
+  color: #e15e32 !important;
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.policy-content a,
+.policy-content [data-custom-class='link'] {
+  color: #ff8a5c !important;
+}
+
+.policy-content ul,
+.policy-content ol {
+  margin-left: 25px;
+}
+
+.policy-content p,
+.policy-content li,
+.policy-content div,
+.policy-content span {
+  line-height: 1.7;
+  font-size: 1rem !important;
+}
